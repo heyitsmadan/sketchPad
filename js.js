@@ -2,6 +2,11 @@ const container = document.querySelector(".container");
 drawGrid(16);
 paintGrid();
 
+let mouseDown = false;
+
+document.body.onmousedown = () => mouseDown=true;
+document.body.onmouseup = () => mouseDown=false;
+
 function drawGrid(n){
     while(container.hasChildNodes()){
         let square = document.querySelector(".square");
@@ -21,6 +26,7 @@ function paintGrid(){
     const squares = document.querySelectorAll(".square")
     squares.forEach(square => {
         square.addEventListener("mouseenter", () => {
+            if(mouseDown)
             square.style.backgroundColor = "black";
         });
     })
