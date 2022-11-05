@@ -6,4 +6,6 @@ body{
     width:640px;
     height:640px;
     border: solid black;
+    display:flex;
+    flex-wrap: wrap;
 }
