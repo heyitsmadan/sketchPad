@@ -1,0 +1,9 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width:640px;
+    height:640px;
+    border: solid black;
+}
