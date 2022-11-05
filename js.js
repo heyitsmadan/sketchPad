@@ -1,4 +1,6 @@
 const container = document.querySelector(".container");
+container.style.width=`${Math.floor(screen.width/2)}px`;
+container.style.height=`${Math.floor(screen.width/2)}px`;
 drawGrid(16);
 paintGrid();
 
@@ -12,7 +14,7 @@ function drawGrid(n){
         let square = document.querySelector(".square");
         container.removeChild(square);
     }
-    squareWidth = 640/n;
+    squareWidth = Math.floor(Math.floor(screen.width/2)/n);
     for(i=1;i<=n*n;i++){
     let square = document.createElement("div");
     square.classList.add("square");
