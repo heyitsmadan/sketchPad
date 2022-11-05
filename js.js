@@ -33,7 +33,13 @@ function paintGrid(){
             square.style.backgroundColor = "black";
             else if(mouseDown && useEraser)
             square.style.backgroundColor = "white";
-        });
+        })
+        square.addEventListener("click", () => {
+            if(!useEraser)
+            square.style.backgroundColor = "black";
+            else if(useEraser)
+            square.style.backgroundColor = "white"; 
+        })
     })
 }
 
