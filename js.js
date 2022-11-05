@@ -5,6 +5,7 @@ drawGrid(16);
 paintGrid();
 
 let mouseDown = false;
+let useEraser = false;
 
 document.body.onmousedown = () => mouseDown=true;
 document.body.onmouseup = () => mouseDown=false;
@@ -28,8 +29,10 @@ function paintGrid(){
     const squares = document.querySelectorAll(".square")
     squares.forEach(square => {
         square.addEventListener("mouseenter", () => {
-            if(mouseDown)
+            if(mouseDown && !useEraser)
             square.style.backgroundColor = "black";
+            else if(mouseDown && useEraser)
+            square.style.backgroundColor = "white";
         });
     })
 }
@@ -51,3 +54,12 @@ clear.addEventListener("click", () => {
     })
 })
 
+
+const eraser = document.querySelector('.eraser');
+eraser.addEventListener('click', () => {
+    useEraser = !useEraser;
+    if(useEraser)
+    eraser.textContent = "Eraser ON";
+    else
+    eraser.textContent = "Eraser OFF";
+})
