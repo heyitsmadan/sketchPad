@@ -41,3 +41,11 @@ btn.addEventListener("click", () => {
     paintGrid();    
 })
 
+const clear = document.querySelector(".clear")
+clear.addEventListener("click", () => {
+    const squares = document.querySelectorAll(".square")
+    squares.forEach(square => {
+        square.style.backgroundColor = "white";
+    })
+})
+
