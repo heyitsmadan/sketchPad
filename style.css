@@ -9,7 +9,3 @@ body{
     display:flex;
     flex-wrap: wrap;
 }
-
-.black{
-    background-color: black;
-}

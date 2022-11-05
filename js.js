@@ -13,7 +13,7 @@ for(i=1;i<=n*n;i++){
 const squares = document.querySelectorAll(".square")
 squares.forEach(square => {
     square.addEventListener("mouseenter", () => {
-        square.classList.add("black");
+        square.style.backgroundColor = "black";
     });
 })
 
