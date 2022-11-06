@@ -61,12 +61,13 @@ clear.addEventListener("click", () => {
     })
 })
 
-
 const eraser = document.querySelector('.eraser');
 eraser.addEventListener('click', () => {
     useEraser = !useEraser;
-    if(useEraser)
-    eraser.textContent = "Eraser ON";
-    else
-    eraser.textContent = "Eraser OFF";
+    if(useEraser){
+    eraser.style.backgroundColor = "#623CEA";
+    }
+    else{
+    eraser.style.backgroundColor = "#fa6400";\
+    }
 })
