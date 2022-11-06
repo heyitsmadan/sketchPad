@@ -52,6 +52,12 @@ button {
   width: auto;
 }
 
+.text{
+  font-family: 'Poppins', sans-serif;
+  color: #623CEA;
+  font-size: 5rem;
+}
+
 button:hover,
 button:focus {
   background-color: #fb8332;
