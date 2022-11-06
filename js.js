@@ -1,6 +1,8 @@
 const container = document.querySelector(".container");
-container.style.width=`${Math.floor(screen.width*30/100)}px`;
-container.style.height=`${Math.floor(screen.width*30/100)}px`;
+
+boardSize = Math.round((Math.floor(screen.width*30/100))/16.0)*16; //sets boardsize to be a multiple of 16
+container.style.width=`${boardSize}px`;
+container.style.height=`${boardSize}px`;
 drawGrid(16);
 paintGrid();
 
@@ -15,7 +17,7 @@ function drawGrid(n){
         let square = document.querySelector(".square");
         container.removeChild(square);
     }
-    squareWidth = Math.floor(Math.floor(screen.width*30/100)/n);
+    squareWidth = Math.floor(boardSize/n);
     for(i=1;i<=n*n;i++){
     let square = document.createElement("div");
     square.classList.add("square");
@@ -49,8 +51,9 @@ btn.addEventListener("click", () => {
     do{
     n = prompt("What should the grid size be? (Enter a number less than 100 to not crash the browser)");
     }while(n>100);
+    if(!n) return;
     drawGrid(n);
-    paintGrid();    
+    paintGrid(); 
 })
 
 const clear = document.querySelector(".clear")
