@@ -68,6 +68,6 @@ eraser.addEventListener('click', () => {
     eraser.style.backgroundColor = "#623CEA";
     }
     else{
-    eraser.style.backgroundColor = "#fa6400";\
+    eraser.style.backgroundColor = "#fa6400";
     }
 })
