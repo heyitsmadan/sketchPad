@@ -21,6 +21,7 @@ function drawGrid(n){
     square.classList.add("square");
     square.style.width=`${squareWidth}px`;
     square.style.height=`${squareWidth}px`;
+    square.style.userSelect="none";
     container.appendChild(square);
     }
 }
