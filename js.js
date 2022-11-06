@@ -35,7 +35,7 @@ function paintGrid(){
             else if(mouseDown && useEraser)
             square.style.backgroundColor = "white";
         })
-        square.addEventListener("click", () => {
+        square.addEventListener("mousedown", () => {
             if(!useEraser)
             square.style.backgroundColor = "black";
             else if(useEraser)
