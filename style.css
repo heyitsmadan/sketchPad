@@ -19,16 +19,6 @@ body{
     background-color: white;
 }
 
-.title{
-  /* position: absolute;
-  bottom:0%; */
-  font-family: "Poppins";
-  color: #623CEA;
-  font-size: 2rem;
-  margin:0;
-  padding:0;
-}
-
 .buttons{
     margin: 10px;
 }
