@@ -7,16 +7,26 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: lightblue;
+    background-color: #BDDDEF;
 }
 
 .container{
-    border: solid black 10px;
+    border: solid #1B2021 10px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
     display:flex;
     flex-wrap: wrap;
     background-color: white;
+}
+
+.title{
+  /* position: absolute;
+  bottom:0%; */
+  font-family: "Poppins";
+  color: #623CEA;
+  font-size: 2rem;
+  margin:0;
+  padding:0;
 }
 
 .buttons{
